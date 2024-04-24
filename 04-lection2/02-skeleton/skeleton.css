@@ -7,11 +7,9 @@
 
 .skeleton__container {
     height: 136px;
-    max-width: 515px;
     padding: 24px 40px 32px 24px;
     display: flex;
     flex-wrap: wrap;
-    flex: 1; 
 }
 
 .skeleton__container_ellipse {
