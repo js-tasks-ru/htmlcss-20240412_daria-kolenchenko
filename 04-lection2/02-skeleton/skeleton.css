@@ -1,18 +1,15 @@
 .skeleton {
     max-width: 579px;
+    height: 136px;
     border: 1px solid;
     border-radius: 8px;
     border-color: var(--grey-3);
-}
-
-.skeleton__container {
-    height: 136px;
     padding: 24px 40px 32px 24px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.skeleton__container_ellipse {
+.skeleton__ellipse {
     background-color: var(--grey-3); 
     height: 64px;
     flex-basis: 64px;
@@ -20,7 +17,7 @@
     margin-bottom: 24px;
 }
 
-.skeleton__container_small-container {
+.skeleton__small-container {
     padding-top: 8px;
     max-height: 48px;
     display: flex;
@@ -29,12 +26,12 @@
     padding-left: 16px;
 }
 
-.skeleton__container_rectangle {
+.skeleton__rectangle {
    background-color: var(--grey-3);
    height: 20px;
    flex-basis: 100%;
 }
 
-.skeleton__container_rectangle_rectangle-small {
+.skeleton__rectangle_rectangle-small {
     flex-basis: 172px;
 }
