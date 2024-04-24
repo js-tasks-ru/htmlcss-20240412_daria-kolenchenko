@@ -1,0 +1,17 @@
+.calendar {
+    max-width: 304px;
+    height: 324px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: var(--grey-3);
+    background-color: var(--white);
+    padding: 28px 30px 40px 26px;
+}
+
+.calendar__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #334D6E;
+}
