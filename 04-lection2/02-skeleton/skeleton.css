@@ -1,25 +1,20 @@
 .skeleton {
     max-width: 579px;
-    height: 192px;
     border: 1px solid;
     border-radius: 8px;
     border-color: var(--grey-3);
-    display: flex;
 }
 
-.skeleton-container {
-    max-height: 136px;
+.skeleton__container {
+    height: 136px;
     max-width: 515px;
-    padding-right: 40px;
-    padding-bottom: 32px;
-    padding-left: 24px;
-    padding-top: 24px;
+    padding: 24px 40px 32px 24px;
     display: flex;
     flex-wrap: wrap;
     flex: 1; 
 }
 
-.ellipse {
+.skeleton__container_ellipse {
     background-color: var(--grey-3); 
     height: 64px;
     flex-basis: 64px;
@@ -27,12 +22,7 @@
     margin-bottom: 24px;
 }
 
-.rectangle {
-   background-color: var(--grey-3);
-   height: 20px; 
-}
-
-.small-container {
+.skeleton__container_small-container {
     padding-top: 8px;
     max-height: 48px;
     display: flex;
@@ -41,14 +31,12 @@
     padding-left: 16px;
 }
 
-.rectangle-small {
+.skeleton__container_rectangle {
+   background-color: var(--grey-3);
+   height: 20px;
+   flex-basis: 100%;
+}
+
+.skeleton__container_rectangle_rectangle-small {
     flex-basis: 172px;
-}
-
-.rectangle-middle {
-    flex-basis: 100%;
-}
-
-.rectangle-large {
-    flex-basis: 100%;
 }
