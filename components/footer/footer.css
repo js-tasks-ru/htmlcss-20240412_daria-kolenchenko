@@ -10,7 +10,7 @@
     align-content: center;
 }
 
-.footer__container_about {
+.footer__about {
     font-family: 'Inter', sans-serif;
     margin: 0px;
     padding-top: 72px;
@@ -22,7 +22,7 @@
     margin-bottom: 32px;
 }
 
-.footer__container_about_about-text {
+.footer__text {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
