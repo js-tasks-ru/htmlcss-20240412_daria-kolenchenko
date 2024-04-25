@@ -14,7 +14,7 @@
     justify-content: space-between;
 }
 
-.histogram__text_main {
+.histogram__text_title {
     font-family: "Inter", sans-serif;
     color: var(--black);
     opacity: 80%;
@@ -24,7 +24,7 @@
     margin: 0px;
 }
 
-.histogram__text_filter {
+.histogram__text_link {
     font-family: "Inter", sans-serif;
     color: #4263EB;
     text-decoration: none;
@@ -34,7 +34,7 @@
     line-height: 24px;
 }
 
-.histogram__text_number {
+.histogram__number {
     font-family: "Inter", sans-serif;
     color: var(--black);
     font-size: 20px;
@@ -43,7 +43,7 @@
     margin: 0px;
 }
 
-.histogram__column {
+.histogram__columns {
     height: 50px;
     padding: 0 29px 24px 26px;
     margin-top: 39px;
@@ -52,7 +52,7 @@
     gap: 1px;
 }
 
-.histogram__column_elem {
+.histogram__column {
     background-color: #4263EB;
     flex-grow: 1;
 }
