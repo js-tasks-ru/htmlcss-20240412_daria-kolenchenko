@@ -1,12 +1,11 @@
 .skeleton {
-    max-width: 579px;
-    height: 136px;
     border: 1px solid;
     border-radius: 8px;
     border-color: var(--grey-3);
     padding: 24px 40px 32px 24px;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .skeleton__ellipse {
@@ -14,16 +13,16 @@
     height: 64px;
     flex-basis: 64px;
     border-radius: 50%;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
 }
 
 .skeleton__small-container {
     padding-top: 8px;
-    max-height: 48px;
-    display: flex;
-    flex-basis: 257px;
-    flex-flow: row wrap;
     padding-left: 16px;
+    flex: 0.5;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 14px;
 }
 
 .skeleton__rectangle {
@@ -32,6 +31,6 @@
    flex-basis: 100%;
 }
 
-.skeleton__rectangle_rectangle-small {
-    flex-basis: 172px;
+.skeleton__rectangle-small {
+    flex-basis: 67%;
 }
