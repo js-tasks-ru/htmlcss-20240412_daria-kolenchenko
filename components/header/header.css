@@ -1,0 +1,19 @@
+.header {
+    background-color: var(--white);
+}
+
+.header__container {
+    max-width: var(--container-width);
+    margin:  0 auto;
+    display: flex;
+}
+
+.header__title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--black);
+    justify-content: flex-start;
+}
