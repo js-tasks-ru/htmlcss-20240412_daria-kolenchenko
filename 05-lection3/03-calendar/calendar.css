@@ -1,20 +1,22 @@
 .calendar {
     max-width: 304px;
-    max-height: 324px;
     border: 1px solid;
     border-radius: 8px;
     border-color: var(--grey-3);
     background-color: var(--white);
     padding: 28px 30px 40px 26px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 24px 1fr;
 }
 
 .calendar__title {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 20px;
-    line-height: 24px;
     color: #334D6E;
-    text-align: center;
+    place-self: start center;
     margin: 0px;
 }
 
@@ -34,7 +36,7 @@
 }
 
 .calendar__item {
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
