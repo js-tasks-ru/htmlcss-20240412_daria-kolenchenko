@@ -18,8 +18,7 @@
     border-radius: 8px;
     position: absolute;
     bottom: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-41%);
 }
 
 .tooltip__bubble::before{
@@ -30,6 +29,11 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.tooltip__trigger {
+    position: absolute;
+    width: 24px;
 }
 
 .tooltip__trigger:hover ~ .tooltip__bubble {
