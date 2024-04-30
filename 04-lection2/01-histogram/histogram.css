@@ -6,13 +6,13 @@
     background-color: var(--white);
 }
 
-.histogram__text {
+.histogram__title {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.histogram__text_title {
+.histogram__text {
     font-family: "Inter", sans-serif;
     color: var(--black);
     opacity: 80%;
@@ -24,7 +24,7 @@
     
 }
 
-.histogram__text_link {
+.histogram__link {
     font-family: "Inter", sans-serif;
     color: #4263EB;
     text-decoration: none;
