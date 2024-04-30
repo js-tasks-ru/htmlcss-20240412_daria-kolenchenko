@@ -1,0 +1,17 @@
+.component {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding-top: 32px;
+    padding-left: 48px;
+    height: 746px;
+}
+
+.component__text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    color: var(--grey-4);
+    margin: 0px;
+}
