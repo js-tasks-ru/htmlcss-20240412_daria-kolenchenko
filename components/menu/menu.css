@@ -11,6 +11,7 @@
 
 .menu__summary {
     height: 40px;
+    cursor: pointer;
 }
 
 .menu__title {
@@ -56,6 +57,7 @@
 
     .menu__summary {
         height: 40px;
+        cursor: pointer;
     }
 
     .menu__title {

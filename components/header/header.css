@@ -47,7 +47,11 @@
     max-width: 350px;
 }
 
-.menu__summary::-webkit-details-marker {
+details > summary {
+    list-style: none;
+}
+  
+details > summary::-webkit-details-marker {
     display: none;
 }
 
@@ -120,7 +124,11 @@
         max-width: 670px;
     }
 
-    .menu__summary::-webkit-details-marker {
+    details > summary {
+        list-style: none;
+    }
+      
+    details > summary::-webkit-details-marker {
         display: none;
     }
 
