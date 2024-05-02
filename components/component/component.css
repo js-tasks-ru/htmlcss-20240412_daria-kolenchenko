@@ -1,5 +1,5 @@
 .component {
-    width: 100%;
+    max-width: var(--container-width);
     background-color: var(--white);
     border-radius: 8px;
     padding-top: 32px;
@@ -18,11 +18,11 @@
 
 @media screen and (min-width: 768px) {
     .component {
-        width: 100%;
+        max-width: var(--container-width);
         background-color: var(--white);
         border-radius: 8px;
         padding-top: 32px;
-        padding-left: 24px;
+        padding-left: 20px;
     }
 
     .component__text {

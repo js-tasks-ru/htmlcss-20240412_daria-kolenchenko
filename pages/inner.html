@@ -10,9 +10,29 @@
     <div class="page page__inner">
         <header class="header_inner">
             <div class="header__container">
-                <svg class="header__menu">
-                    <use href="../assets/icon.svg#menu"></use>
-                </svg>
+                <details class="header__menu">
+                    <summary class="menu__summary">
+                        <svg class="menu__open">
+                            <use href="/assets/icon.svg#menu"></use>
+                        </svg>
+                        <svg class="menu__close">
+                            <use href="/assets/icon.svg#close"></use>
+                        </svg>
+                    </summary>
+                    <div class="menu">
+                        <h4 class="menu__title">Components</h4>
+                        <div class="menu__elements">
+                            <p class="menu__elements_elem">Modal</p>
+                            <p class="menu__elements_elem">Tooltip</p>
+                            <p class="menu__elements_elem">Avatar</p>
+                            <p class="menu__elements_elem">Calendar</p>
+                            <p class="menu__elements_elem">Histogram</p>
+                            <p class="menu__elements_elem">Custom form elements</p>
+                            <p class="menu__elements_elem"></p>
+                            <p class="menu__elements_elem">Main page</p>
+                        </div>
+                    </div>
+                </details> 
                 <div class="header__container_top">
                         <svg class="header__hug">
                             <use href="../assets/icon.svg#header"></use>
@@ -21,7 +41,6 @@
             </div>
         </header>
         <main class="preview">
-            <div class="preview__container">
                 <div class="preview__container_inner">
                     <div class="menu">
                         <h4 class="menu__title">Components</h4>
@@ -40,7 +59,6 @@
                         <h3 class="component__text">Histogram</h3>
                     </div>
                 </div>
-            </div>
         </main>
         <footer class="footer footer__inner">
             <div class="footer__container">

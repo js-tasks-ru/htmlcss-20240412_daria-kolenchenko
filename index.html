@@ -10,9 +10,29 @@
     <div class="page">
         <header class="header">
             <div class="header__container">
-                <svg class="header__menu">
-                    <use href="../assets/icon.svg#menu"></use>
-                </svg>
+                <details class="header__menu">
+                    <summary class="menu__summary">
+                        <svg class="menu__open">
+                            <use href="/assets/icon.svg#menu"></use>
+                        </svg>
+                        <svg class="menu__close">
+                            <use href="/assets/icon.svg#close"></use>
+                        </svg>
+                    </summary>
+                    <div class="menu">
+                        <h4 class="menu__title">Components</h4>
+                        <div class="menu__elements">
+                            <p class="menu__elements_elem">Modal</p>
+                            <p class="menu__elements_elem">Tooltip</p>
+                            <p class="menu__elements_elem">Avatar</p>
+                            <p class="menu__elements_elem">Calendar</p>
+                            <p class="menu__elements_elem">Histogram</p>
+                            <p class="menu__elements_elem">Custom form elements</p>
+                            <p class="menu__elements_elem"></p>
+                            <p class="menu__elements_elem">Main page</p>
+                        </div>
+                    </div>
+                </details> 
                 <div class="header__container_top">
                     <svg class="header__hug">
                         <use href="../assets/icon.svg#header"></use>

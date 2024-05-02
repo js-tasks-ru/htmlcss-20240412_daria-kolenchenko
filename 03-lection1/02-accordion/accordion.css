@@ -6,7 +6,7 @@
     border-radius: 8px;
     margin-bottom: 8px;
     padding: 24px 32px;
-    /**font-size: 24px*/
+    position: relative;
 }
 
 .accordion__summary {
@@ -26,6 +26,17 @@
 
 .accordion__item[open] {
     padding-bottom: 32px;  
+}
+
+.accordion__summary_button {
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    left: 95%;
+}
+
+.accordion__item[open] .accordion__summary_button {
+    transform: rotate(180deg);
 }
 
 .accordion__item:last-child {
