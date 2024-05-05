@@ -1,8 +1,6 @@
 .tooltip {
     display: inline-block;
     position: relative;
-    padding-top: 50px;
-    padding-left: 46px;
 }
 
 .tooltip__bubble {
@@ -17,7 +15,7 @@
     color: var(--grey-2);
     border-radius: 8px;
     position: absolute;
-    bottom: 25%;
+    bottom: calc(100% + 10px);
     transform: translateX(-41%);
 }
 
