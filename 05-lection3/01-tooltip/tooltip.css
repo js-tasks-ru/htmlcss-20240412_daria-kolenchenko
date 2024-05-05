@@ -1,6 +1,8 @@
 .tooltip {
     display: inline-block;
     position: relative;
+    padding-top: 50px;
+    padding-left: 46px;
 }
 
 .tooltip__bubble {
@@ -15,7 +17,7 @@
     color: var(--grey-2);
     border-radius: 8px;
     position: absolute;
-    bottom: calc(100% + 10px);
+    bottom: 25%;
     transform: translateX(-41%);
 }
 
@@ -31,7 +33,7 @@
 
 .tooltip__trigger {
     position: absolute;
-    width: 24px;
+    z-index: 1;
 }
 
 .tooltip__trigger:hover ~ .tooltip__bubble {
