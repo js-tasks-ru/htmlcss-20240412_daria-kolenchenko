@@ -9,33 +9,18 @@
 
 @media screen and (min-width: 768px) {
     .background {
-        min-height: 100%;
-        width: 100%;
         background-image: url("public/forest_768.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .background {
-        min-height: 100%;
-        width: 100%;
         background-image: url("public/forest_1024.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
     }
 }
 
 @media screen and (min-width: 1400px) {
     .background {
-        min-height: 100%;
-        width: 100%;
         background-image: url("public/forest_2560.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
     }
 }
