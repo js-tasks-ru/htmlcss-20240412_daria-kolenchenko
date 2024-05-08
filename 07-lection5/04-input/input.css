@@ -50,6 +50,7 @@
     position: absolute;
     top: 140px;
     left: 340px;
+    display: none;
 }
 
 .input__img_invalid {
@@ -57,6 +58,7 @@
     position: absolute;
     top: 140px;
     left: 750px;
+    display: none;
 }
 
 .input_success {
@@ -101,4 +103,12 @@
 
 .input_invalid:focus {
     outline: none;
+}
+
+.input_success:focus ~ .input__img_success {
+    display: block;
+} 
+
+.input_invalid:focus ~ .input__img_invalid {
+    display: block;
 }
