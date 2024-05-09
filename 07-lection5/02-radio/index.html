@@ -1,45 +1,40 @@
 <!DOCTYPE html>
 <!-- Страница радио -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./radio.css">
-    </head>
-    <body>
-        <div class="container">
-            <label class="radio">
-                <input type="radio" name="radio-name" class="radio__input">
-                <div class="radio__state">
-                    <div class="radio__control">
-                        <svg width="18" height="18" viewBox="0 0 18 18" class="radio__control_img">
-                            <use href="/assets/icon.svg#radio"></use>
-                        </svg>    
-                    </div>
-                    <p class="radio__title">Default</p>
-                </div>
-            </label>
-            <label>
-                <input type="radio" name="radio-name" class="radio__input" checked>
-                <div class="radio__state">
-                    <div class="radio__control">
-                        <svg width="18" height="18" viewBox="0 0 18 18" class="radio__control_img">
-                            <use href="/assets/icon.svg#radio"></use>
-                        </svg>    
-                    </div>
-                    <p class="radio__title">Selected</p>
-                </div>
-            </label>
-            <label>
-                <input type="radio" name="radio-name" class="radio__input" disabled>
-                <div class="radio__state">
-                    <div class="radio__control">
-                        <svg width="18" height="18" viewBox="0 0 18 18" class="radio__control_img">
-                            <use href="/assets/icon.svg#radio"></use>
-                        </svg>    
-                    </div>
-                    <p class="radio__title">Disabled</p>
-                </div>
-            </label>
+
+<head>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./radio.css">
+</head>
+
+<body>
+    <label class="radio">
+        <input type="radio" name="radio-name" class="radio__input">
+        <div class="radio__state">
+            <div class="radio__icon">
+                <div class="radio__icon_img"></div>
+            </div>
+            <p class="radio__title">Default</p>
         </div>
-    </body>
+    </label>
+    <label>
+        <input type="radio" name="radio-name" class="radio__input" checked>
+        <div class="radio__state">
+            <div class="radio__icon">
+                <div class="radio__icon_img"></div>
+            </div>
+            <p class="radio__title">Selected</p>
+        </div>
+    </label>
+    <label>
+        <input type="radio" name="radio-name" class="radio__input" disabled>
+        <div class="radio__state">
+            <div class="radio__icon">
+                <div class="radio__icon_img"></div>
+            </div>
+            <p class="radio__title">Disabled</p>
+        </div>
+    </label>
+</body>
+
 </html>
