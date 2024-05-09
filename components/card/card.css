@@ -1,6 +1,6 @@
 .card {
-    max-width: 350px;
-    height: 367px;
+    max-width: 164px;
+    height: 231px;
     background-color: var(--white);
     border-radius: 8px;
     flex: 1 1 350px;
@@ -12,11 +12,62 @@
 }
 
 .card__text {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     color: var(--black); 
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        max-width: 300px;
+        height: 350px;
+        background-color: var(--white);
+        border-radius: 8px;
+        flex: 1 1 350px;
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        flex-flow: row wrap;
+        text-decoration: none;
+    }
+    
+    .card__text {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--black);
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .card {
+        max-width: 350px;
+        height: 367px;
+        background-color: var(--white);
+        border-radius: 8px;
+        flex: 1 1 350px;
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        flex-flow: row wrap;
+        text-decoration: none;
+    }
+    
+    .card__text {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        color: var(--black); 
+    }
 }
 
 

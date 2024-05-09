@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!-- Главная страница -->
+<!-- Inner page -->
 <html lang="ru">
 
 <head>
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
 <body>
-    <div class="page">
-        <header class="header">
+    <div class="page page__inner">
+        <header class="header_inner">
             <div class="header__container">
                 <details class="header__menu">
                     <summary class="menu__summary">
@@ -34,41 +34,35 @@
                     </div>
                 </details> 
                 <div class="header__container_top">
-                    <svg class="header__hug">
-                        <use href="../assets/icon.svg#header"></use>
-                    </svg>
+                        <svg class="header__hug">
+                            <use href="../assets/icon.svg#header"></use>
+                        </svg>
                 </div>
-                <h1 class="header__title">Reusable component library</h1>
             </div>
         </header>
         <main class="preview">
-            <div class="preview__container">
-                <a class="card" href="">
-                    <p class="card__text">Tooltip</p>
-                </a>
-                <a class="card" href="">
-                    <p class="card__text">Custom form elements</p>
-                </a>
-                <a class="card" href="">
-                    <p class="card__text">Calendar</p>
-                </a>
-                <a class="card" href="">
-                    <p class="card__text">Modal dialog</p>
-                </a>
-                <a class="card" href="">
-                    <p class="card__text">Histogram</p>
-                </a>
-                <a class="card" href="">
-                    <p class="card__text">Avatar</p>
-                </a>
-            </div>
+                <div class="preview__container_inner">
+                    <div class="menu">
+                        <h4 class="menu__title">Components</h4>
+                        <div class="menu__elements">
+                            <p class="menu__elements_elem">Modal</p>
+                            <p class="menu__elements_elem">Tooltip</p>
+                            <p class="menu__elements_elem">Avatar</p>
+                            <p class="menu__elements_elem">Calendar</p>
+                            <p class="menu__elements_elem menu__elements_elem_active">Histogram</p>
+                            <p class="menu__elements_elem">Custom form elements</p>
+                            <p class="menu__elements_elem menu__elements_elem_empty"></p>
+                            <p class="menu__elements_elem">Main page</p>
+                        </div>
+                    </div>
+                    <div class="component">
+                        <h3 class="component__text">Histogram</h3>
+                    </div>
+                </div>
         </main>
-        <footer class="footer">
+        <footer class="footer footer__inner">
             <div class="footer__container">
-                <h2 class="footer__about">About</h2>
-                <p class="footer__text">This project is a collection of professionally designed, pre-built, fully
-                    responsive HTML snippets you can drop into your projects. Get started by checking out our free
-                    preview components, or browsing the PNG previews in the categories you're most curious about.</p>
+                <h5 class="footer__reusable">Reusable component library</h5>
             </div>
         </footer>
     </div>
