@@ -15,8 +15,9 @@
     color: var(--grey-2);
     border-radius: 8px;
     position: absolute;
+    left: 50%;
     bottom: calc(100% + 10px);
-    transform: translateX(-41%);
+    transform: translateX(-50%);
 }
 
 .tooltip__bubble::before{
@@ -30,7 +31,6 @@
 }
 
 .tooltip__trigger {
-    position: absolute;
     z-index: 1;
 }
 
