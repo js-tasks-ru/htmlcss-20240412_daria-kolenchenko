@@ -1,4 +1,4 @@
-.container {
+.input {
     display: grid;
     grid-template-columns: 360px 1fr;
     grid-template-rows: 1fr 1fr;
@@ -18,97 +18,72 @@
     display: block;
 }
 
-.input {
-    width: 350px;
+.input__input {
+    width: 310px;
     height: 56px;
     border: 1px solid var(--grey-2);
     border-radius: 8px;
     padding-left: 24px;
-    position: relative;
-}
-
-.input::placeholder {
+    padding-right: 16px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
+    position: relative;
+}
+
+.input__input::placeholder {
     color: var(--grey-2);
 }
 
-.input:focus {
+.input__input:focus {
     outline: none;
     border-color: #4263EB;
 }
 
-.input:focus::placeholder {
+.input__input:focus::placeholder {
     color: var(--grey-4);
 }
 
-.input__img_success {
-    z-index: 1;
-    position: absolute;
-    top: 140px;
-    left: 340px;
-    display: none;
-}
-
-.input__img_invalid {
-    z-index: 1;
-    position: absolute;
-    top: 140px;
-    left: 750px;
-    display: none;
-}
-
-.input_success {
-    width: 350px;
-    height: 56px;
-    border: 1px solid var(--grey-2);
-    border-radius: 8px;
-    padding-left: 24px;
+.input__wraper {
     position: relative;
 }
 
+.input__icon {
+    z-index: 1;
+    position: absolute;
+    top: 18px;
+    left: 315px;
+    display: none;
+}
+
 .input_success::placeholder {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
     color: var(--grey-4);
 }
 
 .input_invalid {
-    width: 350px;
-    height: 56px;
     border: 1px solid #F03D3E;
-    border-radius: 8px;
-    padding-left: 24px;
-    position: relative;
 }
 
 .input_invalid::placeholder {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
     color: var(--grey-4);
 }
 
 .input_success:focus {
     outline: none;
+    border-color: var(--grey-2);
 }
 
 .input_invalid:focus {
     outline: none;
+    border-color: #F03D3E;
 }
 
-.input_success:focus ~ .input__img_success {
+.input_success:focus ~ .input__icon {
     display: block;
 } 
 
-.input_invalid:focus ~ .input__img_invalid {
+.input_invalid:focus ~ .input__icon {
     display: block;
 }
