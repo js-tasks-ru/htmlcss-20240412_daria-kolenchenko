@@ -26,7 +26,7 @@
     padding: 1px;
 }
 
-.toggler__control_switch {
+.toggler__switch {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -48,7 +48,7 @@
     justify-content: flex-end;
 }
 
-.toggler__input:checked ~ .toggler__state .toggler__control .toggler__control_switch {
+.toggler__input:checked ~ .toggler__state .toggler__control .toggler__switch {
     background-color: var(--white);
 }
 
@@ -60,6 +60,6 @@
     background-color: var(--grey-2);
 }
 
-.toggler__input:disabled ~ .toggler__state .toggler__control .toggler__control_switch {
+.toggler__input:disabled ~ .toggler__state .toggler__control .toggler__switch {
    background-color:  var(--grey-3);
 }
