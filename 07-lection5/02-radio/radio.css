@@ -34,7 +34,7 @@
     color: var( --grey-4);
 }
 
-.radio__icon_img {
+.radio__circle {
     display: none;
     width: 18px;
     height: 18px;
@@ -46,7 +46,7 @@
     border-color: #4263EB;
 }
 
-.radio__input:checked ~ .radio__state .radio__icon .radio__icon_img {
+.radio__input:checked ~ .radio__state .radio__icon .radio__circle {
     display: block;
 }
 
@@ -63,6 +63,6 @@
     color: var( --grey-2);
 }
 
-.radio__input:disabled ~ .radio__state .radio__icon .radio__icon_img {
+.radio__input:disabled ~ .radio__state .radio__icon .radio__circle {
     display: none;
 }
