@@ -1,10 +1,6 @@
-.input {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: start;
-    column-gap: 50px;
-    row-gap: 20px;
+.input__control {
+    display: inline-block;
+    position: relative;
 }
 
 .input__label {
@@ -15,6 +11,7 @@
     line-height: 18px;
     text-transform: uppercase;
     color: var(--grey-3);
+    margin-bottom: 5px;
     display: block;
 }
 
@@ -30,7 +27,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-    position: relative;
 }
 
 .input__input::placeholder {
@@ -50,24 +46,40 @@
     position: relative;
 }
 
+.input__icon_invalid {
+    z-index: 1;
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    display: none; 
+}
+
 .input__icon {
     z-index: 1;
     position: absolute;
     top: 18px;
-    left: 315px;
+    right: 16px;
     display: none;
+}
+
+.input__input_success ~ .input__icon_success { 
+    display: block; 
+}
+
+.input__input_invalid ~ .input__icon_invalid {
+    display: block;
 }
 
 .input_success::placeholder {
     color: var(--grey-4);
 }
 
-.input_invalid {
-    border: 1px solid #F03D3E;
-}
-
 .input_invalid::placeholder {
     color: var(--grey-4);
+}
+
+.input__input_invalid {
+    border: 1px solid #F03D3E;
 }
 
 .input_success:focus {
@@ -78,12 +90,4 @@
 .input_invalid:focus {
     outline: none;
     border-color: #F03D3E;
-}
-
-.input_success:focus ~ .input__icon {
-    display: block;
-} 
-
-.input_invalid:focus ~ .input__icon {
-    display: block;
 }
