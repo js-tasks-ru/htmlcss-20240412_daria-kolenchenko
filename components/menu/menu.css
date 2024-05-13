@@ -5,7 +5,11 @@
     background-color: #F9FAFC;
 }
 
-.menu__summary::-webkit-details-marker {
+details > summary {
+    list-style: none;
+}
+  
+details > summary::-webkit-details-marker {
     display: none;
 }
 
@@ -42,85 +46,32 @@
     color: var(--black);
 }
 
-@media screen and (min-width: 768px) {
-    .menu {
-        display: block;
-        width: 343px;
-        height: 100vh;
-        background-color: #F9FAFC;
+.menu__close {
+    display: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: var(--gray-2);
+}
 
-    }
+.menu__open {
+    display: block;
+    height: 24px;
+    width: 24px;
+}
 
-    .menu__summary::-webkit-details-marker {
-        display: none;
-    }
+.header__menu[open] .menu__close {
+    display: block;
+}
 
-    .menu__summary {
-        height: 40px;
-        cursor: pointer;
-    }
-
-    .menu__title {
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 26px;
-        color: #000000;
-        margin-top: 0px;
-        margin-bottom: 16px;
-        color: #ACB5BD;
-    }
-    
-    .menu__elements {
-       display: flex;
-       flex-flow: column wrap;
-       gap: 4px;
-       justify-content: flex-start;
-    }
-
-    .menu__elements_elem {
-        margin: 0px;
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        color: var(--black);
-    }
-    
+.header__menu[open] .menu__open {
+    display: none;
 }
 
 @media screen and (min-width: 1280px) {
     .menu {
         display: block;
         width: 229px;
-    }
-    
-    .menu__title {
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 26px;
-        color: #000000;
-        margin-top: 0px;
-        margin-bottom: 16px;
-    }
-    
-    .menu__elements {
-       display: flex;
-       flex-flow: column wrap;
-       gap: 4px;
-       justify-content: flex-start;
-    }
-    
-    .menu__elements_elem {
-        margin: 0px;
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        color: var(--black);
     }
     
     .menu__elements_elem_active {
@@ -130,5 +81,8 @@
     .menu__elements_elem_empty {
         height: 22px;
     }
-
+  
+    .header__menu {
+        display: none;
+    }
 }
