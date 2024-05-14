@@ -1,4 +1,4 @@
-.input__control {
+.input {
     display: inline-block;
     position: relative;
 }
@@ -46,14 +46,6 @@
     position: relative;
 }
 
-.input__icon_invalid {
-    z-index: 1;
-    position: absolute;
-    top: 18px;
-    right: 16px;
-    display: none; 
-}
-
 .input__icon {
     z-index: 1;
     position: absolute;
@@ -82,12 +74,12 @@
     border: 1px solid #F03D3E;
 }
 
-.input_success:focus {
+.input__input_success:focus {
     outline: none;
     border-color: var(--grey-2);
 }
 
-.input_invalid:focus {
+.input__input_invalid:focus {
     outline: none;
     border-color: #F03D3E;
 }
