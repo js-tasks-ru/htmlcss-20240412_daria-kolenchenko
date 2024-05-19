@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- Пример использования theme-changer -->
+<html lang="ru">
+
+<head>
+    <style>
+        html[data-theme-dark] {
+            background: #000;
+        }
+
+        html[data-theme-dark] .header {
+            background-color: #000;
+        }
+
+        html[data-theme-dark] .preview {
+            background-color: var(--grey-4);
+        }
+
+        html[data-theme-dark] .footer {
+            background-color: #000;
+        }
+
+        html[data-theme-dark] .card {
+            background-color: #000;
+        }
+
+        html[data-theme-dark] h1 {
+            color: #ffffff75;
+        }
+
+        html[data-theme-dark] h2 {
+            color: #ffffff75;
+        }
+
+        html[data-theme-dark] p {
+            color: #ffffff75;
+        }
+
+        html[data-theme-dark] .header .header__logo > svg {
+            stroke: var(--grey-4);
+            fill: var(--grey-1);
+        }
+
+        html[data-theme-dark] .header .header__nav > svg {
+            stroke: var(--grey-1);
+        }
+
+        html[data-theme-dark] .tabs .tabs__menu > li label {
+            color: var(--grey-3);
+        }
+
+        html[data-theme-dark] .tabs__input:checked ~ nav .tabs__menu > li label {
+            color: var(--grey-3);
+        }
+
+        html[data-theme-dark] .tabs .tabs__menu > li label:after {
+            background-color: var(--grey-3);
+        }
+
+        .header__container {
+            flex-direction: column;
+        }
+
+        .header__nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header__container_top {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .tab {
+            display: flex;
+            gap: 40px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .tabs__input {
+            position: absolute;
+            opacity: 0;
+            left: -100vw;
+        }
+
+        .tabs__nav {
+            max-width: var(--container-width);
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .tabs__menu {
+            width: 100%;
+            display: flex;
+            gap: 40px;
+            height: 37px;
+            padding-left: 0px;
+            margin: 0px;
+            list-style-type: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            transition: 250ms all;
+            cursor: pointer;
+        }
+
+        .tabs__menu > li label {
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            color: var(--grey-3);
+        }
+
+        .tabs__menu > li label:after {
+            content: '';
+            display: block;
+            position: relative;
+            top: 20%;
+            height: 5px;
+            background-color: var(--black);
+            transform: scaleX(0);  
+        }
+
+        @keyframes go {
+            0% {
+                transform: scaleX(0); 
+            }
+            100% {
+                transform: scaleX(1);
+            }
+        }
+
+        .tabs__input_all-tab:checked ~ nav .tabs__menu .tabs__menu_all-tab,
+        .tabs__input_elem-tab:checked ~ nav .tabs__menu .tabs__menu_elem-tab,
+        .tabs__input_containers-tab:checked ~ nav .tabs__menu .tabs__menu_containers-tab,
+        .tabs__input_templates-tab:checked ~ nav .tabs__menu .tabs__menu_templates-tab {
+            color: var(--black);
+        }
+
+        .tabs__input_all-tab:checked ~ nav .tabs__menu .tabs__menu_all-tab:after,
+        .tabs__input_elem-tab:checked ~ nav .tabs__menu .tabs__menu_elem-tab:after,
+        .tabs__input_containers-tab:checked ~ nav .tabs__menu .tabs__menu_containers-tab:after,
+        .tabs__input_templates-tab:checked ~ nav .tabs__menu .tabs__menu_templates-tab:after {
+            animation: go 250ms linear;
+            animation-fill-mode: forwards;
+        }
+        
+        .tabs .tab__content {
+            display: none;
+        }
+
+        .tabs__input_all-tab:checked ~ section .tab__content_all-tab,
+        .tabs__input_elem-tab:checked ~ section .tab__content_elem-tab,
+        .tabs__input_containers-tab:checked ~ section .tab__content_containers-tab,
+        .tabs__input_templates-tab:checked ~ section .tab__content_templates-tab {
+            display: block;
+        }
+
+        .toggler__switch {
+            position: relative;
+            left: 0px;
+            transition: all 500ms ease-out;
+        }
+
+        .toggler__control {
+            background-color: var(--white);
+            transition: all 500ms ease-out;
+        }
+
+        .toggler__input:checked ~ .toggler__control {
+            background-color: #4263EB;
+            border-color: #4263EB;
+            transition: all 500ms ease-out;
+        }
+
+        .toggler__input:checked ~ .toggler__control .toggler__switch {
+          position: relative;
+          left: 28px;
+          transition: all 500ms ease-out;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/07-lection5/03-toggler/toggler.css">
+    <script defer src="./theme-changer.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__container_top">
+                    <div class="header__logo">
+                        <svg height="32" fill="#212429">
+                            <use href="/assets/icon.svg#header"></use>
+                        </svg>
+                    </div>
+                    <div class="header__nav">
+                        <svg width="24" height="24" viewBox="0 0 24 24" stroke="#495057">
+                            <use href="/assets/icon.svg#sun"></use>
+                        </svg>
+                        <label class="toggler">
+                            <input type="checkbox" id="theme-changer" class="toggler__input">
+                                <div class="toggler__control">
+                                    <div class="toggler__switch"></div>
+                                </div>
+                        </label>
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <use href="/assets/icon.svg#moon"></use>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="header__title">Reusable component library</h1>
+            </div>
+        </header>
+        <div class="tabs">
+            <input type="radio" id="#all-tab" name="main-tab" checked="checked" class="tabs__input tabs__input_all-tab">
+            <input type="radio" id="#elem-tab" name="main-tab" class="tabs__input tabs__input_elem-tab">
+            <input type="radio" id="#containers-tab" name="main-tab" class="tabs__input tabs__input_containers-tab">
+            <input type="radio" id="#templates-tab" name="main-tab" class="tabs__input tabs__input_templates-tab">
+            <nav class="tabs__nav">
+                <ul class="tabs__menu">
+                    <li>
+                        <label for="#all-tab" class="tabs__menu_all-tab">All components</label>
+                    </li>
+                    <li>
+                        <label for="#elem-tab" class="tabs__menu_elem-tab">Elements</label>
+                    </li>
+                    <li>
+                        <label for="#containers-tab" class="tabs__menu_containers-tab">Containers</label>
+                    </li>
+                    <li>
+                        <label for="#templates-tab" class="tabs__menu_templates-tab">Templates</label>
+                    </li>
+                </ul>
+            </nav>
+            <section>
+                <div class="tab__content tab__content_all-tab">
+                    <main class="preview">
+                        <div class="preview__container">
+                            <a class="card" href="">
+                                <p class="card__text">Tooltip</p>
+                            </a>
+                            <a class="card" href="">
+                                <p class="card__text">Custom form elements</p>
+                            </a>
+                            <a class="card" href="">
+                                <p class="card__text">Calendar</p>
+                            </a>
+                            <a class="card" href="">
+                                <p class="card__text">Modal dialog</p>
+                            </a>
+                            <a class="card" href="">
+                                <p class="card__text">Histogram</p>
+                            </a>
+                            <a class="card" href="">
+                                <p class="card__text">Avatar</p>
+                            </a>
+                        </div>
+                    </main>
+                </div>
+                <div class="tab__content tab__content_elem-tab">
+                    <p>Some elements content</p>
+                </div>
+                <div class="tab__content tab__content_containers-tab">
+                    <p>Some containers content</p>
+                </div>
+                <div class="tab__content tab__content_templates-tab">
+                    <p>Some templates content</p>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="footer__container">
+                <h2 class="footer__about">About</h2>
+                <p class="footer__text">This project is a collection of professionally designed, pre-built, fully
+                    responsive HTML snippets you can drop into your projects. Get started by checking out our free
+                    preview components, or browsing the PNG previews in the categories you're most curious about.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
