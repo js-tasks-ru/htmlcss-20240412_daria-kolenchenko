@@ -1,14 +1,14 @@
-.burger-menu-open {
+.header__burger-menu-icon {
     border: none;
     background-color: var(--white);
 }
 
-.burger-menu-close {
+.burger-menu__icon {
     border: none;
-    background-color: var(--white);
+    background-color: #F9FAFC;
 }
 
-.burger-menu-close__inside {
+.burger-menu__icon-close {
     width: 32px;
     height: 32px;
     background-color: var(--grey-2);
@@ -20,16 +20,23 @@
 
 .burger-menu {
     position: fixed;
-    top: 64px;
+    top: 0px;
     left: 0px;
     width: 100vw;
     height: 100vh;
     background-color: #F9FAFC;
     transform: translateX(-100vw);
-    transition: transform 250ms linear;
+    transition: transform 500ms linear;
 }
 
-.burger-menu__dark-mode {
+.burger-menu__header {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    place-items: center;
+    min-height: 64px;
+}
+
+.theme-changer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +48,7 @@
     color: var(--grey-4);
 }
 
-.burger-menu__dark-mode_title {
+.theme-changer__title {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     margin: 0px;
@@ -58,23 +65,23 @@
     color: #ACB5BD;
 }
 
-.burger-menu__elements {
+.burger-menu__container {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #212429;
 }
 
-.burger-menu__elements_elem {
+.burger-menu__elem {
     font-family: 'Inter', sans-serif;
     font-style: normal;
 }
 
-.burger-menu__elements_elem_separate {
+.burger-menu__elem_separate {
     margin-top: 56px;
 }
 
-.burger-menu__elements_elem_chosen {
+.burger-menu__elem_active {
     color: #D84910;
 }
 
@@ -82,9 +89,50 @@
     transform: translateX(0);
 }
 
-hr {
-    margin: 0px;
+.burger-menu__underline {
+    height: 1px;
+    background: #DDE2E5;
 }
+
+.theme-changer__toggler {
+    display: block;
+    position: relative;
+}
+
+.theme-changer__input {
+    position: absolute;
+    opacity: 0;
+    left: -100vw;
+}
+
+.theme-changer__control {
+    width: 52px;
+    height: 28px;
+    border-radius: 16px;
+    border: 1px solid var(--grey-2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1px;
+}
+
+.theme-changer__switch {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--grey-2);
+}
+
+.theme-changer__input:checked ~ .theme-changer__control {
+    background-color: #4263EB;
+    border-color: #4263EB;
+    justify-content: flex-end;
+}
+
+.theme-changer__input:checked ~ .theme-changer__control .theme-changer__switch {
+    background-color: var(--white);
+}
+
 
 @media screen and (min-width: 1200px) {
     .burger-menu-open {
