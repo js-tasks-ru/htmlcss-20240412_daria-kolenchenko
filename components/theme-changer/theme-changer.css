@@ -1,0 +1,57 @@
+.theme-changer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-4);
+}
+
+.theme-changer__title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    margin: 0px;
+}
+
+
+.theme-changer__toggler {
+    display: block;
+    position: relative;
+}
+
+.theme-changer__input {
+    position: absolute;
+    opacity: 0;
+    left: -100vw;
+}
+
+.theme-changer__control {
+    width: 52px;
+    height: 28px;
+    border-radius: 16px;
+    border: 1px solid var(--grey-2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1px;
+}
+
+.theme-changer__switch {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--grey-2);
+}
+
+.theme-changer__input:checked ~ .theme-changer__control {
+    background-color: #4263EB;
+    border-color: #4263EB;
+    justify-content: flex-end;
+}
+
+.theme-changer__input:checked ~ .theme-changer__control .theme-changer__switch {
+    background-color: var(--white);
+}

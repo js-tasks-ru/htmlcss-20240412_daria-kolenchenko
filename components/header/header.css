@@ -17,3 +17,14 @@
     color: var(--black);
     justify-content: flex-start;
 }
+
+.header__burger-menu-icon {
+    border: none;
+    background-color: var(--white);
+}
+
+@media screen and (min-width: 1000px) {
+    .header__burger-menu-icon {
+        display: none;
+    }
+}
